@@ -1,0 +1,100 @@
+<nav class="navbar navbar-default" role="navigation">
+	<div class="navbar-header">
+		<p class="navbar-text">Experimenter View</p>
+	</div>
+	<div class="collapse navbar-collapse">
+		<ol class="nav navbar-nav">
+			<li><a href="#/experiments">Experiments</a></li>
+			<li class="active"><a href="#/newExperiment/{{data.name}}">New Experiment</a></li>
+		</ol>
+		<a href="#/portals" class="btn btn-default navbar-btn navbar-right">Sign Out</a>
+		<a href="unimplementedFeature.html" class="btn btn-default navbar-btn navbar-right">Switch Mode</a></button>
+		<a href="#/drafts" class="btn btn-default navbar-btn navbar-right">Drafts</a></button>
+	</div>
+</nav>
+
+<div class="container theme-showcase" role="main">
+	<div class="page-header">
+		<h1>Add New Experiment</h1>
+	</div>
+	<div class="center-block row"><h3>
+		<span class="label label-success">Details</span>
+		<span class="glyphicon glyphicon-arrow-right"></span>
+		<span class="label label-primary">Additional Documents</span>
+		<span class="glyphicon glyphicon-arrow-right"></span>
+		<span class="label label-default">Invitations</span>
+		<span class="glyphicon glyphicon-arrow-right"></span>
+		<span class="label label-default">Preview</span>
+	</h3>
+	<div class="row col-sm-12"><br></div>
+	<h2 class="text-center">Add Questionnaire</h2>	
+	<div class="row col-sm-12"><br></div>
+	
+	<form class="form" role="form">
+		<div class="form-group col-sm-12">
+			<label for="experimentQuestionnaire" class="control-label col-sm-2">Questionnaire</label>
+			<div ng-if="!hasQuestionnaire">
+			<div class="col-sm-4">
+				<a href="#/newQuestionnaire/new/{{data.name}}" class="btn btn-primary">ADD</a>
+			</div>
+			</div>
+			<div ng-if="hasQuestionnaire">
+			<div class="col-sm-4">
+				<a href="#/newQuestionnaire/new/{{data.name}}" class="btn btn-success">EDIT</a>
+			</div>
+			</div>
+		</div>		
+		
+		<div 	class="form-group col-sm-12" >
+			<label for="experimentDocuments" class="control-label col-sm-2">Additional Documents</label>
+			<!--<div class="col-sm-4">
+				<input type="text" class="form-control" id="experimentDocuments" ng-model="data.documents">
+			</div>
+			<a href="unimplementedFeature.html" class="btn btn-primary">UPLOAD</a>-->
+			<div class="col-sm-4"
+				flow-init ="{
+					target: 'data/upload.php',
+					permanentErrors: [404, 500, 501],
+					maxChunkRetries: 1,
+					chunkRetryInterval: 5000,
+					simultaneousUploads: 4,
+					singleFile: false
+				}"
+				flow-files-submitted="$flow.upload();"
+			>
+				<div ng-show="$flow.files.length">
+					<p ng-repeat="file in $flow.files">{{file.name}}</p>
+				</div>
+				<span class="btn btn-primary" flow-btn id="experimentDocuments">UPLOAD</span>
+			</div>
+		</div>
+		<div class="form-group col-sm-12">
+			<label for="experimentRequiredScore" class="control-label col-sm-2">Required Test Score</label>
+			<div class="col-sm-2">
+				<input type="text" class="form-control" id="experimentRequiredScore" ng-model="data.requiredScore" />
+			</div>
+			<label class="control-label">%</label>
+		</div>
+				
+		<div class="form-group col-sm-12">
+			<p class="form-control-static"><br></p>
+		</div>
+		
+		<div class="form-group col sm-12">
+			<a href="#/newExperiment/step1/{{data.name}}" class="btn btn-primary col-sm-1">GO BACK</a>
+			<a href="#/drafts" class="btn btn-primary col-sm-3 col-sm-offset-3" ng-click="save()">SAVE DRAFT</a>
+			<a href="#/newExperiment/step3/{{data.name}}" class="btn btn-success col-sm-1 col-sm-offset-4" ng-click="save()">NEXT(3/4)</a>
+		</div>
+		<div class="form-group col-sm-12">
+			<p class="form-control-static"><br></p>
+		</div>
+		
+		<div class="form-group col sm-12 center-block">
+			<center><a href="#/experiments" class="btn btn-danger col-sm-1 col-sm-offset-5">CANCEL</a></center>
+		</div>
+	</form>
+	<div class="row col-sm-12"><br></div>
+	<div class="row col-sm-12"><br></div>
+	<div class="row col-sm-12"><br></div>
+	<div class="row col-sm-12"><br></div>
+</div>

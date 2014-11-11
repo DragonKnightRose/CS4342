@@ -1,0 +1,38 @@
+<nav class="navbar navbar-default" role="navigation">
+	<div class="navbar-header">
+		<p class="navbar-text">Experimenter View</p>
+	</div>
+	<div class="collapse navbar-collapse">
+		<ol class="nav navbar-nav">
+			<li class=""><a href="#/experiments">Experiments</a></li>
+			<li class="active"><a href="#/drafts">Drafts</a></li>
+		</ol>
+		<a href="#/portals" class="btn btn-default navbar-btn navbar-right">Sign Out</a>
+		<a href="unimplementedFeature.html" class="btn btn-default navbar-btn navbar-right">Switch Mode</a></button>
+		<a href="#/drafts" class="btn btn-default navbar-btn navbar-right">Drafts</a></button>
+	</div>
+
+</nav>
+<div class="container theme-showcase" role="main">
+	<div class="page-header">
+		<h1>Drafts for New Experiments</h1>
+	</div>
+
+
+	<table class="table">
+	<tbody ng-repeat="experiment in experimentsList">
+		<tr>
+			
+			<td>
+				<a class="col-sm-11" href="#/drafts/{{experiment.name}}" style="text-decoration:none" >
+					<p class="h2">{{experiment.name}}</p>
+				</a>
+			</td>
+			<td><a href="#/newExperiment/step1/{{experiment.name}}" class="btn btn-primary">
+				<span class="glyphicon glyphicon-edit"></span>
+				<p>Resume</p></a>
+			</td>
+		</tr>
+	</tbody>
+	</table>
+</div>

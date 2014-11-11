@@ -1,0 +1,20 @@
+[
+{
+ "name": "Occulus Rift",
+ "numParticipants": 22,
+ "maxParticipants": 100,
+ "newRequests": 10,
+ "description": "We test the Occulus Rift! Join us!",
+ "showDetails": false,
+ "carrat": "glyphicon-chevron-right"
+},
+{
+ "name": "Hair Problems",
+ "numParticipants": 55,
+ "maxParticipants": 70,
+ "newRequests": 2,
+ "description": "Having a bad hair day? Let us help!",
+ "showDetails": false,
+ "carrat": "glyphicon-chevron-right"
+}
+]

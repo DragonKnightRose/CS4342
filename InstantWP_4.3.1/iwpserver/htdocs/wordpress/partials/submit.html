@@ -1,0 +1,65 @@
+<nav class="navbar navbar-default" role="navigation">
+	<div class="navbar-header">
+		<p class="navbar-text">Experimenter View</p>
+	</div>
+	<div class="collapse navbar-collapse">
+		<ol class="nav navbar-nav">
+			<li><a href="#/experiments">Experiments</a></li>
+			<li class="active"><a href="#/newExperiment/{{name}}">New Experiment</a></li>
+		</ol>
+		<a href="#/portals" class="btn btn-default navbar-btn navbar-right">Sign Out</a>
+		<a href="unimplementedFeature.html" class="btn btn-default navbar-btn navbar-right">Switch Mode</a></button>
+		<a href="#/drafts" class="btn btn-default navbar-btn navbar-right">Drafts</a></button>
+	</div>
+</nav>
+
+<div class="container theme-showcase" role="main">
+	<div class="page-header">
+		<h1>Add New Experiment</h1>
+	</div>
+	<div class="center-block row"><h3>
+		<span class="label label-success">Details</span>
+		<span class="glyphicon glyphicon-arrow-right"></span>
+		<span class="label label-success">Additional Documents</span>
+		<span class="glyphicon glyphicon-arrow-right"></span>
+		<span class="label label-success">Invitations</span>
+		<span class="glyphicon glyphicon-arrow-right"></span>
+		<span class="label label-primary">Preview</span>
+	</h3>
+	<div class="row col-sm-12"><br></div>
+	<h2 class="col-sm-offset-5 col-sm-3 row">Submit</h2>
+	<div class="row col-sm-12"><br></div>
+	
+	<div class="row col-sm-12">
+		<label>Experiment Name</label>
+		<p>{{data.name}}</p>
+		
+		<label>Number of Participants</label>
+		<p>{{data.maxParticipants}}</p>
+		
+		<div ng-hide="data.description==''">
+			<label>Description</label>
+			<p>{{data.description}}</p>
+		</div>
+		<label>Dates</label>
+		<p>{{data.startDate}} to {{data.endDate}}</p>
+		
+		<label>Duration</label>
+		<p>{{data.duration}} minutes</p>
+		
+		<div ng-hide="data.location==''">
+			<label>Location</label>
+			<p>{{data.location}}</p>
+		</div>
+	</div>
+	<div class="row col-sm-12"><br></div>
+	
+	<div class="row col-sm-12"><br></div>
+	<div>
+		<a href="#/newExperiment/step3" class="btn btn-primary col-sm-1">GO BACK</a>
+		<!--<a href="#/drafts" class="btn btn-primary col-sm-2 col-sm-offset-4" ng-click="save()">SAVE DRAFT</a>-->
+		<a href="#/experiments" class="btn btn-success btn-lg col-sm-2 col-sm-offset-4" ng-click="submit()">SUBMIT</a>
+		<div class="row col-sm-12"><br></div>
+		<center><a href="#/experiments" class="btn btn-danger col-sm-1 col-sm-offset-5">CANCEL</a></center>
+	</div>	
+</div>

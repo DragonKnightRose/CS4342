@@ -1,0 +1,198 @@
+<nav class="navbar navbar-default" role="navigation">
+	<div class="navbar-header">
+		<p class="navbar-text">Experimenter View</p>
+	</div>
+	<div class="collapse navbar-collapse">
+		<ol class="nav navbar-nav">
+			<li class="active"><a href="#/{{experimentName}}">Experiments</a></li>
+		</ol>
+		<a href="#/portals" class="btn btn-default navbar-btn navbar-right">Sign Out</a>
+		<a href="unimplementedFeature.html" class="btn btn-default navbar-btn navbar-right">Switch Mode</a></button>
+		<a href="#/drafts" class="btn btn-default navbar-btn navbar-right">Drafts</a></button>
+	</div>
+
+</nav>
+<div class="container theme-showcase" role="main">
+<div flow-init>
+	<div class="page-header">
+		<h1>Create Questionnaire
+		<div ng-if="path == 'new'">
+			<a href="#/newExperiment/step2/{{experimentName}}" class="btn btn-lg btn-success pull-right" ng-click="submit()">Save</a>
+		</div>
+		<div ng-if="path == 'edit'">
+			<a href="#/experiments/{{experimentName}}" class="btn btn-lg btn-success pull-right" ng-click="submit()">Save</a>
+		</div>
+		</h1>
+	</div>
+	<dl class="col-sm-4">
+	<h2>Preview</h2>
+	<div ng-repeat="question in questions">
+		<img ng-if="question.image !='' && question.image!=null" src="data/temp/{{question.image}}">
+		<div ng-if="question.type=='instruction'">
+			<dt>{{question.question}}</dt>
+		</div>
+		<div ng-if="question.type=='checkbox'">
+			<dt>{{question.question}}</dt>
+			<dd ng-repeat="answer in question.answers">
+				<input type="checkbox">{{answer.response}}</input>
+			</dd>
+		</div>
+		<div ng-if="question.type=='shortAnswer'">
+			<dt>{{question.question}}</dt>
+			<dd>
+				<input type="text"></input>
+			</dd>
+		</div>
+		<div ng-if="question.type=='longAnswer'">
+			<dt>{{question.question}}</dt>
+			<dd>
+				<textarea></textarea>
+			</dd>
+		</div>
+		<div ng-if="question.type=='multipleChoice'">
+			<dt>{{question.question}}</dt>
+			<dd>
+				<div ng-repeat="answer in question.answers">
+						<input name="question{{index}}radios" type="radio">{{answer.response}}</input>
+					</label>
+				</div>
+			</dd>
+		</div>
+	</div>
+	</dl>
+	
+	<div class="col-sm-7">
+		<div class="form-group">
+			<label class="control-label h2">Add a multiple response question</label>
+			<label class="h5 pull-right" ng-if="mrQuestionType=='Checkbox'">
+				<button type="button" class="btn btn-danger" ng-click="removeCheckResponse()">-</button>
+				Responses (<span ng-bind="cb_responses.length"></span>)
+				<button type="button" class="btn btn-success" ng-click="addCheckResponse()">+</button>
+			</label>
+			<label class="h5 pull-right" ng-if="mrQuestionType=='Multiple Choice'">
+				<button type="button" class="btn btn-danger" ng-click="removeMCResponse()">-</button>
+				Responses (<span ng-bind="mc_responses.length"></span>)
+				<button type="button" class="btn btn-success" ng-click="addMCResponse()">+</button>
+			</label>
+			<form class="form" role="form">
+			<div class="form-group">
+				<!--<a href="#/uploadImage/{{experimentName}}" class="btn btn-primary col-sm-3">Add Images</a>-->
+				<button type="button" class="btn btn-primary col-sm-3" ng-click="launch()">Add Images</button>
+				<span class="col-sm-5 col-sm-offset-4">
+				<select class="form-control" ng-model="mrQuestionType" ng-init="mrQuestionType='Checkbox'" ng-change="mrImagePath=''">
+					<option selected="selected">Checkbox</option>
+					<option>Multiple Choice</option>	
+				</select>
+				</span>
+			</div>
+		</form>
+		</div>
+		<p>&nbsp;<br></p>
+		<div ng-if="mrQuestionType=='Checkbox'">
+		<p class="h4">Add a new Checkbox</p>
+		<form class="form" role="form" name="checkboxForm" novalidate>
+			<div class="form-group">
+				<img src="data/temp/{{mrImagePath}}" ng-if="mrImagePath!=''" />
+			</div>
+			<div class="form-group" ng-class="{'has-error': checkboxForm.question.$invalid && !checkboxForm.question.$pristine}">
+				<label class="contol-label">Question Text <span style="color:red">(Required)</span></label>
+				<input type="text" ng-model="newCheckQuestion" class="form-control" name="question" required></input>
+			</div>			
+			<div class="form-group" ng-repeat="cb_response in cb_responses">
+				<label class="control-label">Response {{$index+1}}:</label>
+				<input type="text" ng-model="cb_response.response" class="form-control"></input>
+			</div>
+			<div class="row">&nbsp;</div>
+				<button	type="button" 
+						class="btn col-sm-offset-5" 
+						ng-click="newCheckQuestion = addCheckbox(newCheckQuestion); checkboxForm.$setPristine();"
+						ng-disabled="checkboxForm.$invalid"
+						ng-class="{'btn-success': !checkboxForm.$invalid, 'btn-warning': checkboxForm.$invalid}"
+				>
+					Add
+				</button>
+		</form>
+		</div>
+		<div ng-if="mrQuestionType=='Multiple Choice'">
+		<p class="h4">Add a new Multiple Choice</p>
+		<form class="form" role="form">
+			<div class="form-group">
+				<img src="data/temp/{{mrImagePath}}" ng-if="mrImagePath!=''" />
+			</div>
+			<div class="form-group">				
+				<label class="contol-label">Question</label>
+				<input type="text" ng-model="newMCQuestion" class="form-control"></input>
+			</div>
+			<div class="form-group" ng-repeat="mc_response in mc_responses">
+				<label class="control-label">Response {{$index+1}}:</label>
+				<input type="text" ng-model="mc_response.response" class="form-control"></input>
+			</div>
+			<div class="form-group">
+				<button type="button" class="btn btn-primary col-sm-offset-5" ng-click="addMultipleChoice(newMCQuestion)">Add</button>
+			</div>
+		</form>
+		</div>
+		
+		<div ng-if="newQuestionType=='Instruction'">
+			<p class="h4">Add a new Instruction</p>
+			<form class="form" role="form">
+				<div class="form-group">
+					<label class="control-label">Instruction</label>
+					<textarea  class="form-control" ng-model="instructionQueston"></textarea>
+					<button type="button" class="btn btn-primary col-sm-offset-5" ng-click="addInstruction()">Add</button>
+				</div>
+			</form>
+		</div>
+		
+		<label class="control-label h2">Add a participant response question</label>
+		<form class="form" role="form">
+			<div class="form-group">
+				<button type="button" class="btn btn-primary col-sm-3" ng-click="launch2()">Add Images</button>
+				<span class="col-sm-5 col-sm-offset-4">
+				<select class="form-control" ng-model="paQuestionType" ng-init="paQuestionType='Short Answer'" ng-change="prImagePath=''">
+					<option>Short Answer</option>
+					<option>Long Answer</option>	
+				</select>
+				</span>
+			</div>
+		</form>
+		<p><br>&nbsp;</p>
+		<div ng-if="paQuestionType=='Short Answer'">
+		<p class="h4">Add a new Short Answer</p>
+		<form class="form" role="form" name="shortAnswerForm">
+			<div class="form-group">
+				<img src="data/temp/{{prImagePath}}" ng-if="prImagePath!=''" />
+			</div>
+			<div class="form-group" ng-class="{'has-error': shortAnswerForm.question.$invalid && !shortAnswerForm.question.$pristine}">
+				<label class="control-label">Question Text <span style="color:red">(Required)</span></label>
+				<input type="text" ng-model="newShortQuestion" class="form-control" name="question" required></input>
+				<div class="row">&nbsp;</div>
+				<button type="button" 
+						class="btn btn-primary col-sm-offset-5"
+						ng-click="newShortQuestion = addShortAnswer(newShortQuestion); shortAnswerForm.$setPristine();"
+						ng-disabled="shortAnswerForm.$invalid"
+						ng-class="{'btn-success': !shortAnswerForm.$invalid, 'btn-warning': shortAnswerForm.$invalid}"
+				>
+					Add
+				</button>
+			</div>
+		</form>
+		</div>
+		<div ng-if="paQuestionType=='Long Answer'">
+		<p class="h4">Add a new Long Answer</p>
+		<form class="form" role="form">
+			<div class="form-group">
+				<img src="data/temp/{{prImagePath}}" ng-if="prImagePath!=''" />
+			</div>
+			<div class="form-group">
+				<label class="control-label">Question</label>
+				<input type="text" ng-model="newLongQuestion" class="form-control"></input>
+			</div>
+			<div class="form-group">
+				<button type="button" class="btn btn-primary col-sm-offset-5" ng-click="addLongAnswer(newLongQuestion)">Add</button>
+			</div>
+		</form>
+		</div>
+	</div>
+</div>
+</div>

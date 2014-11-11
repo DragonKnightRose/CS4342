@@ -1,0 +1,8 @@
+@import "bower_components/angular-upload/src/directives/btnUpload.less";
+.progress{
+	margin-bottom: 5px !important;
+}
+
+p {
+	margin: 0 0 5px;
+	}

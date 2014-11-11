@@ -1,0 +1,116 @@
+<nav class="navbar navbar-default" role="navigation">
+	<div class="navbar-header">
+		<p class="navbar-text">Experimenter View</p>
+	</div>
+	<div class="collapse navbar-collapse">
+		<ol class="nav navbar-nav">
+			<li><a href="#/experiments">Experiments</a></li>
+			<li class="active"><a href="#/newExperiment/{{name}}">New Experiment</a></li>
+		</ol>
+		<a href="#/portals" class="btn btn-default navbar-btn navbar-right">Sign Out</a>
+		<a href="unimplementedFeature.html" class="btn btn-default navbar-btn navbar-right">Switch Mode</a></button>
+		<a href="#/drafts" class="btn btn-default navbar-btn navbar-right">Drafts</a></button>
+	</div>
+</nav>
+
+<div class="container theme-showcase" role="main">
+	<div class="page-header">
+		<h1>Add New Experiment</h1>
+	</div>
+	<div class="center-block row"><h3>
+		<span class="label label-primary">Details</span>
+		<span class="glyphicon glyphicon-arrow-right"></span>
+		<span class="label label-default">Additional Documents</span>
+		<span class="glyphicon glyphicon-arrow-right"></span>
+		<span class="label label-default">Invitations</span>
+		<span class="glyphicon glyphicon-arrow-right"></span>
+		<span class="label label-default">Preview</span>
+	</h3></div>
+	<div class="row col-sm-12"><br></div>
+	<h2 class="text-center">Add Title/Details</h2>
+	
+	
+	<div class="row col-sm-12"><br></div>
+	<form class="form" role="form" name="ExperimentInfo" novalidate>
+	<div class="row">
+		<div class="form-group col-sm-6" ng-class="{'has-error': ExperimentInfo.title.$invalid && !ExperimentInfo.title.$pristine}">
+			<label for="experimentName" class="control-label">Title <span style="color:red">(Required)</span></label>
+			<input type="text" class="form-control" id="experimentName" name="title" ng-model="data.name" required />
+		</div>
+	
+		<div class="form-group col-sm-4 col-sm-offset-2" ng-class="{'has-error': ExperimentInfo.participants.$invalid && !ExperimentInfo.participants.$pristine}">
+			<label for="experimentMaxParticipants" class="control-label">Number of Participants <span style="color:red">(Required)</span></label>
+			<input type="text" class="form-control" id="experimentMaxParticipants" name="participants" ng-model="data.maxParticipants" required>
+		</div>
+	</div>
+	
+	<div class="row col-sm-12"><br></div>
+	<div class="row col-sm-12"><br></div>
+	
+	<div class="row">
+		<div class="form-group col-sm-12">
+			<label for="experimentDescription" class="control-label">Brief Description</label>
+			<textarea class="form-control" rows="6" ng-model="data.description"></textarea>
+		</div>
+		<div class="form-group col-sm-12">
+			<p class="form-control-static"><br></p>
+		</div>
+		<div class="form-group">
+			<div class="pull-left col-sm-5">
+			<label for="experimentDates" class="control-label">Dates</label>
+			<div class="input-group">
+				<input type="date" class="form-control" ng-model="data.startDate">
+				<span class="input-group-addon">to</span>
+				<input type="date" class="form-control" ng-model="data.endDate">
+			</div>
+			</div>
+			<div class="col-sm-offset-5 col-sm-2">
+				<label for="experimentDuration" class="control-label">Duration (minutes)</label>
+				<input type="text" class="form-control" id="experimentDuration" ng-model="data.duration">
+			</div>
+		</div>
+		<div class="form-group col-sm-12">
+			<p class="form-control-static"><br></p>
+		</div>
+		<div class="form-group col-sm-13">
+			<div class="pull-left col-sm-5">
+				<label for="experimentLocation" class="control-label">Location</label>
+				<textarea class="form-control" rows="3" id="experimentLocation" ng-model="data.location"></textarea>
+			</div>
+			<div class="col-sm-offset-2 col-sm-5">
+				<label for="experimentContact" class="control-label">Contact Info</label>
+				<textarea class="form-control" rows="3" id="experimentLocation" ng-model="data.contact"></textarea>
+			</div>
+			
+		</div>
+		<div class="form-group col-sm-12">
+			<p class="form-control-static"><br></p>
+		</div>
+		
+		<div class="form-group col sm-12">
+			<a href="#/drafts" class="btn btn-primary col-sm-3 col-sm-offset-4" ng-click="save()">SAVE DRAFT</a>
+			<a 	href="#/newExperiment/step2/{{data.name}}" 
+				class="btn col-sm-1 col-sm-offset-4" 
+				ng-click="save(ExperimentInfo.$invalid)" 
+				ng-disabled="ExperimentInfo.$invalid"
+				ng-class="{'btn-success': !ExperimentInfo.$invalid, 'btn-warning': ExperimentInfo.$invalid}"
+			>
+				NEXT(2/4)
+			</a>
+			<!--<button type="submit" class="btn col-sm-1 col-sm-offset-4" ng-class="{btn-success: !ExperimentInfo.$invalid, btn-warning: ExperimentInfo.$invalid}" ng-disabled="ExperimentInfo.$invalid" ng-click="errorMessage(ExperimentInfo.$invalid)">NEXT</button>-->
+		</div>
+		<div class="form-group col-sm-12">
+			<p class="form-control-static"><br></p>
+		</div>
+		
+		<div class="form-group col sm-12 center-block">
+			<center><a href="#/experiments" class="btn btn-danger col-sm-1 col-sm-offset-5">CANCEL</a></center>
+		</div>
+	</div>
+	</form>
+	
+	<div class="row col-sm-12"><br></div>
+	<div class="row col-sm-12"><br></div>
+	<div class="row col-sm-12"><br></div>
+	<div class="row col-sm-12"><br></div>
+</div>

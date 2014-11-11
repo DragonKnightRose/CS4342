@@ -1,0 +1,1 @@
+[{"type":"checkbox","question":"Hello","answers":[{"response":"Hi!"},{"response":"Bye.."},{"response":"What?"}],"image":""},{"type":"multipleChoice","question":"Will you survive the zombie apocalypse?","answers":[{"response":"Yes"},{"response":"No"}],"image":""}]

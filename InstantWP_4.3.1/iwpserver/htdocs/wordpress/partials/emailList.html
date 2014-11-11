@@ -1,0 +1,98 @@
+<nav class="navbar navbar-default" role="navigation">
+	<div class="navbar-header">
+		<p class="navbar-text">Experimenter View</p>
+	</div>
+	<div class="collapse navbar-collapse">
+		<ol class="nav navbar-nav">
+			<li><a href="#/experiments">Experiments</a></li>
+			<li class="active"><a href="#/newExperiment/{{name}}">New Experiment</a></li>
+		</ol>
+		<a href="#/portals" class="btn btn-default navbar-btn navbar-right">Sign Out</a>
+		<a href="unimplementedFeature.html" class="btn btn-default navbar-btn navbar-right">Switch Mode</a></button>
+		<a href="/drafts" class="btn btn-default navbar-btn navbar-right">Drafts</a></button>
+	</div>
+</nav>
+
+<div class="container theme-showcase" role="main">
+	<div class="page-header">
+		<h1>Add New Experiment</h1>
+	</div>
+	<div class="center-block row"><h3>
+		<span class="label label-success">Details</span>
+		<span class="glyphicon glyphicon-arrow-right"></span>
+		<span class="label label-success">Additional Documents</span>
+		<span class="glyphicon glyphicon-arrow-right"></span>
+		<span class="label label-primary">Invitations</span>
+		<span class="glyphicon glyphicon-arrow-right"></span>
+		<span class="label label-default">Preview</span>
+	</h3>
+	<div class="row col-sm-12"><br></div>
+	<h2 class="text-center">Email List</h2>	
+	<div class="row col-sm-12"><br></div>
+	<div>
+		<span class="h4">Select List of Participants</span>
+		<div class="panel panel-default col-sm-10 col-sm-offset-1">
+			<div class="panel-body">
+				<div class="col-sm-6 col-sm-offset-2">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" value="">
+						Staff + Students
+					</label>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" value="">
+						Only Staff
+					</label>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" value="">
+						Only Students
+					</label>
+				</div>	
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" value="">
+						All Freshman
+					</label>
+				</div>	
+				</div>
+				<div class="col-sm-4">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" value="">
+						All Sophmores
+					</label>
+				</div>	
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" value="">
+						All Juniors
+					</label>
+				</div>	
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" value="">
+						All Seniors
+					</label>
+				</div>	
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" value="">
+						Alumni
+					</label>
+				</div>
+				</div>	
+			</div>
+		</div>
+	<div class="row col-sm-12"><br></div>
+	<div>
+		<a href="#/newExperiment/step2/{{data.name}}" class="btn btn-primary col-sm-1">GO BACK</a>
+		<a href="#/drafts" class="btn btn-primary col-sm-3 col-sm-offset-3" ng-click="save()">SAVE DRAFT</a>
+		<a href="#/newExperiment/step4/{{data.name}}" class="btn btn-success col-sm-1 col-sm-offset-4">NEXT(4/4)</a>
+		<div class="row col-sm-12"><br></div>
+		<center><a href="#/experiments" class="btn btn-danger col-sm-1 col-sm-offset-5">CANCEL</a></center>
+	</div>	
+</div>

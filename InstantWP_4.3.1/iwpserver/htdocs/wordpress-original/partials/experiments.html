@@ -1,0 +1,68 @@
+<nav class="navbar navbar-default" role="navigation">
+	<div class="navbar-header">
+		<p class="navbar-text">Experimenter View</p>
+	</div>
+	<div class="collapse navbar-collapse">
+		<ol class="nav navbar-nav">
+			<li class="active"><a href="#/{{name}}">Experiments</a></li>
+		</ol>
+		<a href="unimplementedFeature.html" class="btn btn-default navbar-btn navbar-right">Sign Out</a>
+		<a href="unimplementedFeature.html" class="btn btn-default navbar-btn navbar-right">Switch Mode</a></button>
+	</div>
+
+</nav>
+<div class="container theme-showcase" role="main">
+	<div class="page-header">
+		<h1>My Experiments</h1>
+	</div>
+	<div class="pull-right">
+		<a href="#/newExperiment/step1" class="btn btn-large btn-primary">
+		<span class="glyphicon glyphicon-plus-sign"></span>
+		<p>Add New Experiment</p>
+		</a>
+	</div>
+
+	<table class="table">
+	<tbody ng-repeat="experiment in experimentsList">
+		<tr>
+			<td>
+				<button type="button" class="btn btn-primary" ng-click="experiment.showDetails = !experiment.showDetails">
+					<span class="glyphicon glyphicon-chevron-right" "></span>
+				</button>
+			</td>
+			<td>
+				<a class="col-sm-11" href="#/experiments/{{experiment.name}}" style="text-decoration:none" >
+					<p class="h2">{{experiment.name}}</p>
+				</a>
+			</td>
+			<td><a href="#/experiments/{{experiment.name}}" class="btn btn-primary">
+				<span class="glyphicon glyphicon-edit"></span>
+				<p>Edit/Manage</p></a>
+			</td>
+			<td>
+				<div class="progress">
+					<div class="progress-bar" 
+						role="progressbar"
+						aria-valuenow="{{experiment.numParticipants}}"
+						aria-valuemin="0"
+						aria-valuemax="{{experiment.maxParticipants}}"
+						
+						style="width: {{experiment.numParticipants / experiment.maxParticipants*100}}%"
+					>
+						
+					</div>
+				</div>
+				<p>{{experiment.numParticipants}} out of {{experiment.maxParticipants}} participants</p>
+			</td>
+			<td>
+				<a href="unimplementedFeature.html">New Participant Requests <span class="badge">{{experiment.newRequests}}</span></a>
+			</td>
+		</tr>
+		<tr ng-show="experiment.showDetails">
+			<td colspan="5">
+				<p>{{experiment.description}}</p>
+			</td>
+		</tr>
+	</tbody>
+	</table>
+</div>
