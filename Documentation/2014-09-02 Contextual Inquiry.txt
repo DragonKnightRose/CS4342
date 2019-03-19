@@ -1,0 +1,170 @@
+How are experiments currently tracked?
+How are participants scheduled?
+What makes a participant qualified?
+
+CN1 - Dr. John Cole?
+CN2
+CN3 - Max
+
+is there a reason you like paper?
+
+EM1- Fey tang(?) 
+EM2 - Jack
+EM3 - Ale(c?x)
+
+how do you advertise experiments
+
+Class Notebook:
+"I load a stuff to elearning...ppts..."-CN1
+"I answer a lot of stuff to the whole class"-CN1
+
+"Last semester I took data structures...I would like to write an examples
+ for that note and, for each topic I can review that example, 
+ so I think I will understand what's the topic about" -CN2
+"If I can make connections with each knowledge" -CN2
+
+"I try to organize my classes from the beginning." -CN3
+blanks are filled in on slides -CN3
+"I needed a place that wasn't provided to write [notes] down"-CN3
+"I try and put [hw, written assignments] in the same place"-CN3
+colour coordination (based on class)-CN3
+"there wasn't a system where I could organize the way I wanted"-CN3
+"main topics were in one colour...stuff my instructor said that mattered was in another colour"-CN3
+"Colour scheme was not always the same"-CN3
+Easy to break apart material. -CN3
+
+CN3 - "having option to organize however I'm thinking at the time."
+CN3 - "I'd also want to be able to manipulate any documents I'm given in class or are created in class"
+CN3 - "Number one is being able to organize"
+
+CN3 - "If we have a group...start with one set and scan, send off...repeat"
+CN3 - "Attach it in notes section in ppts"
+CN3 - "I like paper"
+CN3 - "once you've created files, you can't manipulate them easily"
+CN3 - "there aren't a lot of programs that I've used"
+CN3 - "It made it easy when I tried to share"
+CN3 - reused binders
+CN3 - "It's how I learn. I take the notes"
+
+CN1 - "I can measure how many times its been downloaded" Doesn't tell much.
+CN1 - "Kindle will tell amazon when/where you stopped reading. Amazingly intrusive. I'd love to know that."
+CN1 - "Now I know who's read the material and when"
+CN1 - "Correlation, which I can then use as ammunition"
+
+CN3 - "If I could assign in advance what each colour was supposed to mean."
+CN3 - palette for reference/key
+
+CN1 - "Annotating a pdf is most useful"
+CN2 - pdf, ppt - CN3
+CN3 - "I highlight a lot"
+
+CN3 - "It seems like, if there was a way that I could be able to assign it to share with these people, or make it public."
+CN1 - "We use the ppts as talking points. We read stuff on the slides, then we add to it. Certain things are more important. There should be a way to call it out."
+CN1 - "If I read that a lot of people have a question on something, I might want to add a slide or two on that, or an assignment on that."
+CN1 - "It's clear that the student has gone through everything, I'm much more inclined to help someone who's put in a bunch of effort."
+CN1 - "If a bright student has put in a lot of effort, but still has a lot of questions, we may want to teach that differently."
+CN3 - "I would like the option to ask privately."
+
+CN3 - "I would love a calendar option." (to keep track of things)
+CN1 - "It would make sense if I have 2 sections of the same thing to post to all of them."
+CN3 - "There are options where you can embed links, but I never got it to work. Sharing it messed up my document."
+CN1 - "If it's integrated in elearning, it wouldn't necessarily work with things not uploaded there."
+CN1 - "Since a lot of people have elearning it would make sense to integrate with that."
+CN3 - "Everything I put on google, google has access to."
+CN3 - "One of the benefits is that they track who makes changes, when, and what they are."
+
+CN1 - "It might be nice to know [when they share my exams]."
+CN1 - "A lot of us reuse questions. There's nothing we can do, but we'd know."
+CN1 - "The more information we have, the better."
+
+CN3 - "Evernote is something I have in my email that I've never done."
+CN3 - "I can do it across 6 different apps."
+
+Experiment Manager:
+"I need to schedule a lot of participants" -EM1
+done with email-EM1
+"50 participants scheduled at a time"-EM1
+"A lot of people send me emails"-EM1
+"I need to send them the information by a link"-EM1
+"If participants want to change the time...they need to send me an email"-EM1
+reminder emails-EM1
+"There's a lot of repeating jobs"-EM1
+main concern is scheduling-EM1
+
+
+Jack
+one study experience
+"First send out emails to like everyone in ECS"-EM2
+"They reply and I have list of responders"-EM2
+doodle poll link to sign up-EM2
+wait for reply-EM2
+"What if participants have special requirements/needs?"-EM2
+	recruit or not?-EM2
+rescheduling is a problem-EM2
+"What if the participants don't show up the first time?"-EM2
+"You need to recruit a certain number of participants"-EM2
+
+
+"When I'm running a study...send out email to ECS"-EM3
+Recieve email-EM3
+send email to give interest-EM3
+needed even numbers-EM3
+running study in 3 different ways"-EM3
+"I had to round-robin students into fidelity as well as type"-EM3
+link to corresponding doodle poll-EM3
+either signed up, or couldn't make it-EM3
+additional quiz-EM3
+run study-EM3
+"I would have to add results to currently running excel sheet"-EM3
+more questions online-EM3
+"All of this data had to be kept together for each person's file"-EM3
+"It was kinda messy"-EM3
+People showing up for one day, not the other-EM3
+"Each person had to consistently arrive at the same time 24 hours later"-EM3
+Hard to communicate the 24 hour return-EM3
+
+
+
+what kind of experiments are you doing
+EM3 - asking for sonna credits instead of money, but not affiliated with BBS
+EM3 - no forms for sonna
+EM3 - even though very brain-related
+
+EM1 - rescheduling experiments would be good
+
+EM3 - "We're using [Qualtrics]...One of the quizzes we have...exporting into csvs comes out into a long set of 0s, 1s...hard to interpret"
+
+EM3 - notified disqualified in event of cancellation
+
+EM2 - not medical, previous participation didn't matter
+
+EM3 - "We excluded all participants from previous studies"
+EM3 - "We did CS and ATECH because they were immediately available. Realisticly, anyone was allowed to participate"
+
+EM1 - results recorded in excel, google spreadsheets
+EM3 - "I started off using excel and open office. Towards the end I started using google spreadsheet [for seeing in multiple places]."
+EM2 - "Only work on campus"
+EM1 - "Check emails at home"
+EM3 - "There are some disqualifying characteristics, as well as waitlist"
+EM3 - "Towards the start, I did it like a queue. But then there were times when no one cancelled, so I would pull from the top, since they responded most recently and would be most likely to respond"
+
+EM3 - "You send out an email...presents them with a quiz...on my end, I can log in and click on "export csv", has start/stop time,how they answered"
+EM2 - "I don't have any preference on whether participants have experience"
+EM2 - "I need them to wear contacts instead of glasses, and sandals when they show up, but we can't force them."
+EM3 - "I used doodle poll pretty consistently for everyone, until about the last week, where it was critical that everyone show up."
+EM3 - "I always provided several options"
+
+EM3 - texts would be extremely helpful "I had to drop several people because they stopped responding"
+EM1 - use blacklist for participants
+EM2 - "There is a setting so participants can't see others' availability"
+EM3 - "We print out posters, put out around JSOM, etc. Basically posters and emails." (Advertising for participants)
+EM3 - "In addition to doodle, I record what times people have signed up for on excel. The weekend before, I write what times people have signed up for, so I can know when to be at the lab."
+EM2 - "I keep doodle poll emails in gmail, and check email every day"
+EM3 - "You can just search for 'from Doodle'"
+EM2 - "I like to keep my gmail inbox clean. I just keep the doodle emails in the inbox."
+EM1 - (I can't really understand this guy)
+EM2 - Demographic info in Qualtrics
+EM3 - "Every day I looked at who I had for the next day, and email them with place, time, 'please, please show up'."
+EM3 - "I'd really like to not manually have to do that."
+
+EM3 - "The questions I asked were choose the following...it would return 1s and 0s. Besides that, there are some multiple choice, short answer, longer answers, yes or no (if yes, addl question)."
